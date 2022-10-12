@@ -6,16 +6,20 @@ const subtract = function(a,b) {
 	return a - b;
 };
 
-const sum = function(a,b) {
-	return a + b;
+const sum = function(arr) {
+	return arr.reduce((a,b) => a + b, 0);
 };
 
-const multiply = function(a,b) {
-  return a * b;
+const multiply = function(arr) {
+  return arr.reduce((a,b) => a * b, 1);
 };
 
 const power = function(a,b) {
-	return a ** b;
+  let power = a;
+	for(let i = 1; i < b; i++){
+    a = a * power;
+  }
+  return a;
 };
 
 const factorial = function(a,b) {
