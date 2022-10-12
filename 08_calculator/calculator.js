@@ -22,11 +22,15 @@ const power = function(a,b) {
   return a;
 };
 
-const factorial = function(a,b) {
-	for(let i = 0; i < b; i++){
-    a = a * a;
+const factorial = function(a) {
+  if(a==0){return 1;}
+
+  let factor = a;
+
+	for(let i = 1; i < a; i++){
+    factor = i * factor;
   }
-  return a;
+  return factor;
 };
 
 // Do not edit below this line
